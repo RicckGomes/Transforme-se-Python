@@ -70,7 +70,7 @@ print(frutas);
 print(frutaRemovida);
 print();
 
-# Embaralhando os valores da lista com o método sort()
+# Ordenando os valores da lista em ordem alfabética com o método sort()
 frutas.sort();
 print(frutas);
 print();
