@@ -6,14 +6,13 @@ Operadores Aritméticos
 a = 10;
 b = 3;
 
-# Somando valores
-soma = a + b;
-subtracao = a - b;
-multiplicacao = a * b;
-divisao = a / b;
-resto = a % b;
-descarteParteFracionaria = a // b;
-potencia = a ** b;
+soma = a + b; # Somando valores
+subtracao = a - b; # Subtraindo valores
+multiplicacao = a * b; # Multiplicando valores
+divisao = a / b; # Dividindo valores
+resto = a % b; # Resto da divisão dos valores
+descarteParteFracionaria = a // b; # Descartando parte fracionária dos valores
+potencia = a ** b; # Potenciação dos valores
 print("A soma dos números é:", soma);
 print("A subtração dos números é:", subtracao);
 print("A multiplicação dos números é:", multiplicacao);
