@@ -82,4 +82,34 @@ while palavra != "sair":
     palavra = palavra.lower();
     
 print();
+
+# Exemplo 7: Implementação de menu de opções
+
+opcao = 0;
+
+while opcao != 4:
+    print("Menu:");
+    print("1 - Opção 1");
+    print("2 - Opção 2");
+    print("3 - Opção 3");
+    print("4 - Sair");
+    
+    opcao = int(input("Informe a opção escolhida: "))
+    
+    if opcao == 1:
+        print("Opção 1 escolhida!");
+        print();
+    elif opcao == 2:
+        print("Opção 2 escolhida!");
+        print();
+    elif opcao == 3:
+        print("Opção 2 escolhida!");
+        print();
+    elif opcao == 4:
+        print("Saindo...");
+        print();
+        break;
+    else:
+        print("Opção inválida!");
+        print();
     
