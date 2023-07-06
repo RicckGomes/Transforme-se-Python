@@ -6,8 +6,10 @@ esses números.
 print();
 print("Número 1");
 print("---------------------------------------------------");
-num1 = int(input(" Por gentileza digite o primeiro número inteiro: "));
-num2 = int(input(" Por gentileza digite o segundo número inteiro: "));
+print("Vamos Fazer operações aritméticas com dois números inteiros.");
+print();
+num1 = int(input("Por gentileza digite o primeiro número inteiro: "));
+num2 = int(input("Por gentileza digite o segundo número inteiro: "));
 print("---------------------------------------------------");
 soma          = num1 + num2;
 subtracao     = num1 - num2;
@@ -30,6 +32,8 @@ ebulição da água (100°C). Caso positivo, exiba a mensagem "A
 """
 print("Número 2");
 print("---------------------------------------------------");
+print("Vamos verificar se a água está fervendo.");
+print();
 temperatura = float(input("Por gentileza digite a temperatura informada no termômetro: "));
 
 if temperatura > 100:
@@ -47,6 +51,8 @@ inteiro e verifique se ele é par ou ímpar.
 """
 print("Número 3");
 print("---------------------------------------------------");
+print("Verificando se o número é par.");
+print();
 numeroInt = int(input("Por gentileza, digite um número inteiro: "));
 
 if numeroInt % 2 == 0:
@@ -65,6 +71,8 @@ verifique se a senha está correta. Considere a senha correta como
 """
 print("Número 4");
 print("---------------------------------------------------");
+print("Verificando se a senha esta correta.");
+print();
 senha = input("Digite sua senha: ");
 senhaCorreta = "123456";
 if senha == senhaCorreta:
@@ -82,6 +90,8 @@ verifique se ela está entre 18 e 30 anos (inclusive).
 """
 print("Número 5");
 print("---------------------------------------------------");
+print("Verificando se o número está entre um intervalo definido.");
+print();
 idade = int(input("Digite a sua idade: "));
 
 if idade >= 18 and idade <= 30:
@@ -99,6 +109,8 @@ inteiros e verifique se pelo menos um deles é positivo.
 """
 print("Número 6");
 print("---------------------------------------------------");
+print("Verificando se o número é positivo.");
+print();
 numero1 = int(input("Digite o primeiro número inteiro: "));
 numero2 = int(input("Digite o segundo número inteiro: "));
 numero3 = int(input("Digite o terceiro número inteiro: "));
@@ -143,6 +155,8 @@ verifique se ela é uma vogal (a, e, i, o, u).
 """
 print("Número 7");
 print("---------------------------------------------------");
+print("Verificando se a letra é vogal.");
+print();
 letra = input("Digite uma letra: ");
 
 if letra.lower() in ['a', 'e', 'i', 'o', 'u']:
@@ -160,6 +174,8 @@ inteiro e verifique se ele é positivo, negativo ou zero.
 """
 print("Número 8");
 print("---------------------------------------------------");
+print("Verificando se o número positivo, negativo ou zero.");
+print();
 numero = int(input("Por gentileza, digite um número inteiro: "));
 
 if numero > 0:
@@ -181,6 +197,8 @@ verifique se eles estão em ordem crescente.
 """
 print("Número 9");
 print("---------------------------------------------------");
+print("Verificando se os números estão em ordem crescente.");
+print();
 numero1 = float(input("Digite o primeiro número: "));
 numero2 = float(input("Digite o segundo número: "));
 numero3 = float(input("Digite o terceiro número: "));
@@ -201,6 +219,8 @@ inteiro e verifique se ele é um múltiplo de 3 e 5 ao mesmo tempo.
 """
 print("Número 10");
 print("---------------------------------------------------");
+print("Verificando se o número é multiplo de 3 e 5 ao mesmo tempo.");
+print();
 numInteiro = int(input("Por gentileza digite um número inteiro: "));
 
 if numInteiro % 3 == 0 and numInteiro % 5 == 0:
