@@ -52,46 +52,57 @@ print();
 print(prato);
 print();
 escolhaPrato = int(input("Digite o número do prato escolhido: "));
+qtdPrato     = int(input("Digite a quantidade: "));
 if escolhaPrato == 1:
     print("O prato escolhido foi Filé de frango!");
-    escolhaPrato = prato["1 - Filé de frango"];
+    escolhaPratoValor = prato["1 - Filé de frango"];
+    escolhaPrato = "Filé de frango             ";
     print();
 elif escolhaPrato == 2:
     print("O prato escolhido foi Filé de frango a parmegiana!");
-    escolhaPrato = prato["2 - Filé de frango a parmegiana"];
+    escolhaPratoValor = prato["2 - Filé de frango a parmegiana"];
+    escolhaPrato = "Filé de frango a parmegiana";
     print();
 elif escolhaPrato == 3:
     print("O prato escolhido foi Bife!");
-    escolhaPrato = prato["3 - Bife"];
+    escolhaPratoValor = prato["3 - Bife"];
+    escolhaPrato = "Bife                       ";
     print();
 elif escolhaPrato == 4:
     print("O prato escolhido foi Bife a parmegiana!");
-    escolhaPrato = prato["4 - Bife a parmegiana"];
+    escolhaPratoValor = prato["4 - Bife a parmegiana"];
+    escolhaPrato = "Bife a parmegiana          ";
     print();
 elif escolhaPrato == 5:
     print("O prato escolhido foi Bife de ancho!");
-    escolhaPrato = prato["5 - Bife de ancho"];
+    escolhaPratoValor = prato["5 - Bife de ancho"];
+    escolhaPrato = "Bife de ancho              ";
     print();
 elif escolhaPrato == 6:
     print("O prato escolhido foi Filé mignon!");
-    escolhaPrato = prato["6 - Filé mignon"];
+    escolhaPratoValor = prato["6 - Filé mignon"];
+    escolhaPrato = "Filé mignon                ";
     print();
 elif escolhaPrato == 7:
     print("O prato escolhido foi Beringela a parmegiana!");
-    escolhaPrato = prato["7 - Beringela a parmegiana"];
+    escolhaPratoValor = prato["7 - Beringela a parmegiana"];
+    escolhaPrato = "Beringela a parmegiana     ";
     print();
 elif escolhaPrato == 8:
     print("O prato escolhido foi Salmão grelhado!");
-    escolhaPrato = prato["8 - Salmão grelhado"];
+    escolhaPratoValor = prato["8 - Salmão grelhado"];
+    escolhaPrato = "Salmão grelhado            ";
     print();
 elif escolhaPrato == 9:
     print("O prato escolhido foi Strogonoff de frango!");
-    escolhaPrato = prato["9 - Strogonoff de frango"];
+    escolhaPratoValor = prato["9 - Strogonoff de frango"];
+    escolhaPrato = "Strogonoff de frango       ";
     print();
 else: 
     escolhaPrato == 10;
     print("O prato escolhido foi Strogonoff de carne!");
-    escolhaPrato = prato["10 - Strogonoff de carne"];
+    escolhaPratoValor = prato["10 - Strogonoff de carne"];
+    escolhaPrato = "Strogonoff de carne        ";
     print();
 
 print("Escolha três acompanhamentos:")
@@ -100,6 +111,7 @@ escolhaAcompanhamento1 = int(input("Digite o número do primeiro acompanhamento:
 escolhaAcompanhamento2 = int(input("Digite o número do segundo acompanhamento: "));
 escolhaAcompanhamento3 = int(input("Digite o número do terceiro acompanhamento: "));
 
+# Salvando o acompanhamento 1 em uma variável
 if escolhaAcompanhamento1 == 1:
     escolhaAcompanhamento1 = acompanhamento[0];
 elif escolhaAcompanhamento1 == 2:
@@ -115,6 +127,7 @@ elif escolhaAcompanhamento1 == 6:
 elif escolhaAcompanhamento1 == 7:
     escolhaAcompanhamento1 = acompanhamento[6];
     
+# Salvando o acompanhamento 2 em uma variável
 if escolhaAcompanhamento2 == 1:
     escolhaAcompanhamento2 = acompanhamento[0];
 elif escolhaAcompanhamento2 == 2:
@@ -130,6 +143,7 @@ elif escolhaAcompanhamento2 == 6:
 elif escolhaAcompanhamento2 == 7:
     escolhaAcompanhamento2 = acompanhamento[6];
     
+# Salvando o acompanhamento 3 em uma variável
 if escolhaAcompanhamento3 == 1:
     escolhaAcompanhamento3 = acompanhamento[0];
 elif escolhaAcompanhamento3 == 2:
@@ -146,18 +160,27 @@ elif escolhaAcompanhamento3 == 7:
     escolhaAcompanhamento3 = acompanhamento[6];
     
 print();
-acompanhamentos = print(f"Acompanhamentos: {escolhaAcompanhamento1}, {escolhaAcompanhamento2} e {escolhaAcompanhamento3}.");
 
+qtd = qtdPrato
+valorTotal = escolhaPratoValor * qtdPrato;
 
+# Simulando a impressão do pedido para o cliente
 print();
-print("-------------------------------------------");
-print("         ", nomeEstabelecimento);
-print("-------------------------------------------");
+print("---------------------------------------------------------------------------------");
+print("                           ", nomeEstabelecimento);
+print("---------------------------------------------------------------------------------");
 print(enderecoEstabelecimento);
 print(bairroEstabelecimento);
 print("CNPJ:", cnpjEstabelecimento);
 print("DATA:", data);
 print("Operador:", atendente[2]);
-print("-------------------------------------------");
-print("Qtd.    Valor Unitário    Valor Total");
-print("-------------------------------------------");
+print("----------------------------------------------------------------------------------");
+print(" Qtd.  Descrição                                         Valor Unit.  Valor Total");
+print(" ", qtd, "  ", escolhaPrato, "                           ", escolhaPratoValor, "       ", valorTotal);
+print("----------------------------------------------------------------------------------");
+
+
+print("==================================================================================");
+print(f"Acompanhamentos: {escolhaAcompanhamento1}, {escolhaAcompanhamento2} e {escolhaAcompanhamento3}");
+print("==================================================================================");
+print();
