@@ -161,7 +161,7 @@ elif escolhaAcompanhamento3 == 7:
     
 print();
 
-qtd = qtdPrato
+qtd = qtdPrato;
 valorTotal = escolhaPratoValor * qtdPrato;
 
 # Simulando a impressão do pedido para o cliente
@@ -177,6 +177,7 @@ print("Operador:", atendente[2]);
 print("----------------------------------------------------------------------------------");
 print(" Qtd.  Descrição                                         Valor Unit.  Valor Total");
 print(" ", qtd, "  ", escolhaPrato, "                           ", escolhaPratoValor, "       ", valorTotal);
+print()
 print("----------------------------------------------------------------------------------");
 
 
