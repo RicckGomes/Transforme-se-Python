@@ -18,7 +18,6 @@ def adivinhacao():
     
     print();
     limite = obterInputInteiro("Digite o valor máximo desejado: ");
-    print();
     numeroSecreto = random.randint(1, limite);
     tentativas = 0;
     print();
