@@ -64,6 +64,7 @@ def adivinhacao():
     jogarNovamente = obterInputInteiro("Deseja jogar novamente? 1. SIM - 2. NÃO: ");  
     if jogarNovamente == 1:
         adivinhacao();
+        print();
     # O código abaixo também funcionaria, porém por questão de desempenho vou com o IF
     # while jogarNovamente == 1:
     #     adivinhacao();
