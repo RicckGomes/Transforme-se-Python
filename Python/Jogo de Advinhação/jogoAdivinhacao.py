@@ -60,7 +60,7 @@ def adivinhacao():
             break;
     print();
     
-    jogarNovamente = obterInputInteiro("Deseja jogar novamente? 1. SIM - 2. NÃO: ");  
+    jogarNovamente = obterInputInteiro("Deseja jogar novamente? 1. SIM - 2. NÃO: ");
     if jogarNovamente == 1:
         adivinhacao();
         print();
