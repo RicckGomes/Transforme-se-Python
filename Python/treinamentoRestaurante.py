@@ -38,11 +38,11 @@ acompanhamento = ["1 - arroz branco", "2 - arroz com brócolis", "3 - feijão", 
 
 # Criando um dicionário com as bebidas
 bebida = {
-    'Coca-Cola 250ml'        : 3.90,
-    'Fanta laranja 250ml'    : 3.70,
-    'Fanta guaraná 250ml'    : 3.70,
-    'Guaraná antártica 250ml': 3.90,
-    'Suco de laranja 500ml'  : 6.90
+    '1 - Coca-Cola 250ml'        : 3.90,
+    '2 - Fanta laranja 250ml'    : 3.70,
+    '3 - Fanta guaraná 250ml'    : 3.70,
+    '4 - Guaraná antártica 250ml': 3.90,
+    '5 - Suco de laranja 500ml'  : 6.90
 }
 
 # Iniciando o funcionamento do sistema
@@ -158,11 +158,45 @@ elif escolhaAcompanhamento3 == 6:
     escolhaAcompanhamento3 = acompanhamento[5];
 elif escolhaAcompanhamento3 == 7:
     escolhaAcompanhamento3 = acompanhamento[6];
-    
+ 
+ # Escolhendo a bebida   
+print();
+print(bebida);
+print();
+escolhaBebida = int(input("Digite o número da bebida escolhida: "));
+qtdBebidas    = int(input("Digite a quantidade: "));
+if escolhaBebida == 1:
+    print("A bebida escolhida foi Coca-Cola 250ml!");
+    escolhaBebidaValor = bebida["1 - Coca-Cola 250ml"];
+    escolhaBebida = "Coca-Cola 250ml";
+    print();
+elif escolhaBebida == 2:
+    print("A bebida escolhida foi Fanta laranja 250ml!");
+    escolhaBebidaValor = bebida["2 - Fanta laranja 250ml"];
+    escolhaBebida = "Fanta laranja 250ml";
+    print();
+elif escolhaBebida == 3:
+    print("A bebida escolhida foi Fanta guaraná 250ml!");
+    escolhaBebidaValor = bebida["3 - Fanta guaraná 250ml"];
+    escolhaBebida = "Fanta guaraná 250ml";
+    print();
+elif escolhaBebida == 4:
+    print("A bebida escolhida foi Guaraná antártica 250ml!");
+    escolhaBebidaValor = bebida["4 - Guaraná antártica 250ml"];
+    escolhaBebida = "Guaraná antártica 250ml";
+    print();
+elif escolhaBebida == 5:
+    print("A bebida escolhida foi Suco de laranja 500ml!");
+    escolhaBebidaValor = bebida["5 - Suco de laranja 500ml"];
+    escolhaBebida = "Suco de laranja 500ml";
+    print();
+
 print();
 
 qtd = qtdPrato;
-valorTotal = escolhaPratoValor * qtdPrato;
+valorTotalPrato = escolhaPratoValor * qtdPrato;
+qtd2 = qtdBebidas;
+valorTotalBebidas = escolhaBebidaValor * qtdBebidas;
 
 # Simulando a impressão do pedido para o cliente
 print();
@@ -176,7 +210,7 @@ print("DATA:", data);
 print("Operador:", atendente[2]);
 print("----------------------------------------------------------------------------------");
 print(" Qtd.  Descrição                                         Valor Unit.  Valor Total");
-print(" ", qtd, "  ", escolhaPrato, "                           ", escolhaPratoValor, "       ", valorTotal);
+print(" ", qtd, "  ", escolhaPrato, "                           ", escolhaPratoValor, "       ", valorTotalPrato);
 print()
 print("----------------------------------------------------------------------------------");
 
