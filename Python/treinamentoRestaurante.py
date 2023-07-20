@@ -168,27 +168,27 @@ qtdBebidas    = int(input("Digite a quantidade: "));
 if escolhaBebida == 1:
     print("A bebida escolhida foi Coca-Cola 250ml!");
     escolhaBebidaValor = bebida["1 - Coca-Cola 250ml"];
-    escolhaBebida = "Coca-Cola 250ml";
+    escolhaBebida = "Coca-Cola 250ml            ";
     print();
 elif escolhaBebida == 2:
     print("A bebida escolhida foi Fanta laranja 250ml!");
     escolhaBebidaValor = bebida["2 - Fanta laranja 250ml"];
-    escolhaBebida = "Fanta laranja 250ml";
+    escolhaBebida = "Fanta laranja 250ml        ";
     print();
 elif escolhaBebida == 3:
     print("A bebida escolhida foi Fanta guaraná 250ml!");
     escolhaBebidaValor = bebida["3 - Fanta guaraná 250ml"];
-    escolhaBebida = "Fanta guaraná 250ml";
+    escolhaBebida = "Fanta guaraná 250ml        ";
     print();
 elif escolhaBebida == 4:
     print("A bebida escolhida foi Guaraná antártica 250ml!");
     escolhaBebidaValor = bebida["4 - Guaraná antártica 250ml"];
-    escolhaBebida = "Guaraná antártica 250ml";
+    escolhaBebida = "Guaraná antártica 250ml    ";
     print();
 elif escolhaBebida == 5:
     print("A bebida escolhida foi Suco de laranja 500ml!");
     escolhaBebidaValor = bebida["5 - Suco de laranja 500ml"];
-    escolhaBebida = "Suco de laranja 500ml";
+    escolhaBebida = "Suco de laranja 500ml      ";
     print();
 
 print();
@@ -198,24 +198,43 @@ valorTotalPrato = escolhaPratoValor * qtdPrato;
 qtd2 = qtdBebidas;
 valorTotalBebidas = escolhaBebidaValor * qtdBebidas;
 
+qtdTotal = qtd ++ qtd2;
+valorTotal = valorTotalPrato ++ valorTotalBebidas;
+
+print(f"O total é: {valorTotal:.2f}");
+valorPago = float(input("Informe o valor pago: "));
+
+while valorPago < valorTotal:
+    print("O valor informado é inferior ao valor total.");
+    valorPago = float(input("Informe o valor pago: "));
+    if valorPago == valorTotal:
+        break
+
 # Simulando a impressão do pedido para o cliente
 print();
-print("---------------------------------------------------------------------------------");
+print("==================================================================================");
 print("                           ", nomeEstabelecimento);
-print("---------------------------------------------------------------------------------");
+print("==================================================================================");
 print(enderecoEstabelecimento);
 print(bairroEstabelecimento);
 print("CNPJ:", cnpjEstabelecimento);
 print("DATA:", data);
-print("Operador:", atendente[2]);
-print("----------------------------------------------------------------------------------");
+print("Operador:", atendente[1]);
+print("==================================================================================");
 print(" Qtd.  Descrição                                         Valor Unit.  Valor Total");
-print(" ", qtd, "  ", escolhaPrato, "                           ", escolhaPratoValor, "       ", valorTotalPrato);
+print(f"  {qtd}    {escolhaPrato}                             {escolhaPratoValor:.2f}        {valorTotalPrato:.2f}");
+print(f"  {qtd2}    {escolhaBebida}                              {escolhaBebidaValor:.2f}        {valorTotalBebidas:.2f}");
 print()
-print("----------------------------------------------------------------------------------");
-
-
 print("==================================================================================");
 print(f"Acompanhamentos: {escolhaAcompanhamento1}, {escolhaAcompanhamento2} e {escolhaAcompanhamento3}");
+print("==================================================================================");
+print("Quantidade de itens lançados: ", qtdTotal);
+print();
+print(f"                                      VALOR TOTAL: {valorTotal:.2f}");
+print("                                     ----------------------");
+print(f"                                       VALOR PAGO: {valorPago:.2f}");
+print();
+print("==================================================================================");
+print("                             NÃO É DOCUMENTO FISCAL");
 print("==================================================================================");
 print();
