@@ -39,7 +39,7 @@ class JogoAdivinhacao:
             if palpite < self.numeroSecreto:
                 if self.tentativas == self.escolhaTentativas:
                     print("=========================================================");
-                    print(f"Não foi dessa vez, {self.nomeJogador}, você atingiu o limite de {self.escolhaTentativas} tentativas!");
+                    print(f"{self.nomeJogador}, não foi dessa vez, você atingiu o limite de {self.escolhaTentativas} tentativas!");
                     print("O número secreto era:", self.numeroSecreto);
                     print("=========================================================");
                     break;
@@ -48,7 +48,7 @@ class JogoAdivinhacao:
             elif palpite > self.numeroSecreto:
                 if self.tentativas == self.escolhaTentativas:
                     print("=========================================================");
-                    print(f"Não foi dessa vez, {self.nomeJogador}, você atingiu o limite de {self.escolhaTentativas} tentativas!");
+                    print(f"{self.nomeJogador}, não foi dessa vez, você atingiu o limite de {self.escolhaTentativas} tentativas!");
                     print("O número secreto era:", self.numeroSecreto);
                     print("=========================================================");
                     break;
@@ -58,7 +58,10 @@ class JogoAdivinhacao:
                 print(f"Parabéns, {self.nomeJogador}! Você acertou o número em {self.tentativas} tentativas!");
                 print("=========================================================");
                 break;
+            
+        self.jogarNovamente();
 
+    def jogarNovamente(self):
         jogarNovamente = self.obterInputInteiro("Deseja jogar novamente? 1. SIM | 2. NÃO: ");
         print("=========================================================");
         if jogarNovamente == 1:
@@ -72,7 +75,7 @@ class JogoAdivinhacao:
             self.jogar();
         
         else:
-            print(f"{self.nomeJogador}, obrigado por jogar, espero que tenha gostado da experiência!");
+            print(f"{self.nomeJogador}, obrigado por jogar! Espero que tenha gostado da experiência!");
             print("=========================================================");
 
 jogo = JogoAdivinhacao();
